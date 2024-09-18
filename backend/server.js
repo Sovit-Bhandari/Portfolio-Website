@@ -4,6 +4,7 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const sgMail = require('@sendgrid/mail');
+const path = require('path');  // Import path module
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -11,6 +12,14 @@ const app = express();
 app.use(cors()); 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// Serve static files (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, '../frontend')));  // Adjust path if needed
+
+// Catch-all route to serve index.html
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend', 'website.html'));  // Adjust path if needed
+});
 
 app.post('/send-email', (req, res) => {
     const { name, email, subject, message } = req.body;
@@ -43,4 +52,3 @@ app.post('/send-email', (req, res) => {
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
-
