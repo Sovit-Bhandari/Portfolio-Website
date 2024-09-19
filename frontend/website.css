@@ -21,6 +21,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .navigation-container{
@@ -49,6 +50,7 @@
     align-items: center;
     list-style: none;
     text-align: center;
+    
 }
 
 #img-logo {
@@ -246,6 +248,7 @@
     font-size: 35px;
     font-weight: 400;
     text-decoration: underline;
+
 }
 
 #main-container{
@@ -258,8 +261,6 @@
 .details-container{
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1400px;
     margin: 120px auto 0 auto;
 }
 
@@ -301,7 +302,7 @@
 }
 
 .highlight-name {
-    font-size: 1.5em; 
+    font-size: 1.5rem; 
     font-weight: bold;
     font-family: "Margarine", sans-serif;
     color: rgb(226, 105, 19);
@@ -527,7 +528,7 @@
 
 .gitdrive:hover {
     color: black;
-    background-color: #d47ed4; /* Added hover effect */
+    background-color: #d47ed4; 
 }
 
 .video{
@@ -543,7 +544,7 @@
     border-radius: 25px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centered content */
+    justify-content: center; 
 }
 
                                                             /* Contact */
@@ -677,7 +678,7 @@ textarea{
 
                                                 /* Footer Content Styling */
     footer {
-        background-color: skyblue; /* Light grey background */
+        background-color: skyblue;
         padding: 10px 0;
         text-align: center;
     }
@@ -686,7 +687,7 @@ textarea{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Space between text and icons */
+        gap: 10px; 
         background: transparent;
     }
 
@@ -696,19 +697,19 @@ textarea{
     
     .footer-icon {
         display: flex;
-        gap: 20px; /* Space between icons */
+        gap: 20px; 
         background: transparent;
     }
     
     .icons {
-        width: 30px; /* Adjust size as needed */
-        height: 30px; /* Adjust size as needed */
-        cursor: pointer; /* Pointer cursor on hover */
+        width: 30px; 
+        height: 30px; 
+        cursor: pointer; 
         background: transparent;
     }
     
     .icons:hover {
-        opacity: 0.7; /* Slightly dim the icon on hover */
+        opacity: 0.7; 
 
     }
     
@@ -734,7 +735,7 @@ textarea{
     }
 
     .highlight-name {
-        font-size: 1.3em; 
+        font-size: 1.3rem; 
     }
 
     .skills-div{
@@ -745,11 +746,10 @@ textarea{
 
                                                             /* Responsive desing */
 @media screen and (max-width: 1024px){
-
-    body{
-        overflow-x: hidden;
-    }
     
+    .navigation{
+        width: auto;
+    }
 
     .navigation-menu{
         display: grid;
@@ -881,7 +881,7 @@ textarea{
     }
     
     .highlight-name {
-        font-size: 1.35em; 
+        font-size: 1.35rem; 
     }
 
                                                                 /* Skills */
@@ -894,7 +894,7 @@ textarea{
                                                                 /* project */
     .project-detail{
         padding: 0 10px;
-        width: 100%;
+        width: 95%;
         gap:2rem;
     }
 
@@ -910,13 +910,9 @@ textarea{
         font-size: 17px;
     }
 }
-                                                    /* HAlf */
+                                                              /* HAlf */
 @media screen and (max-width: 920px){
-
-    body{
-        overflow-x: hidden;
-    }
-
+    
     #home-div{
         margin-top:4rem;
         display: grid;
@@ -930,8 +926,8 @@ textarea{
     }
 
     .how-are-you-img img{
-        height: 350px;
-        width: 350px;
+        height: 320px;
+        width: 320px;
     }
 
     .hello_text{
@@ -943,11 +939,11 @@ textarea{
     }
 
     #sovitbhandari{
-        font-size: 40px;
+        font-size: 30px;
     }
 
     #a-student{
-        font-size: 35px;
+        font-size: 30px;
     }
 
                                                         /* Skills */
@@ -968,6 +964,8 @@ textarea{
 
 
                                          /* Experience */
+
+
     .row{
         gap: 3rem;
     }   
@@ -1035,6 +1033,10 @@ textarea{
         justify-content: space-between;
     }
 
+    #tech-skills{
+        grid-column: span 2;
+    }
+
     .robot{
         padding:15px;
     }
@@ -1056,7 +1058,6 @@ textarea{
         margin: 0 auto;
     }
 
-
                                                /* contact */
     .contact-container2{
         display: grid;
@@ -1072,16 +1073,104 @@ textarea{
 
 
 
+
 }
 
-@media screen and (max-width: 768px){
-                                                    /* Skills */
-    #tech-skills{
-        grid-column: span 2;
-    }
-}
 
 @media screen and (max-width: 528px){
+
+    #home, #About-me, #my-experience, #my-projects, #contact-me{
+        overflow-x: hidden;
+    }
+
+    #home{
+        margin-top: 4rem;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 0;
+        height: 80%;
+    }
+
+
+    .how-are-you-img img{
+        position: relative;
+        left:10px;
+        height: 250px;
+        width: 250px;
+    }
+
+    .navigation {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        overflow: visible;
+    }
+
+    .navigation-menu.active{
+        left: 0;
+    }
+
+    .logo{
+        transform: scale(0.85);
+    }
+    
+    #img-logo {
+        height: 45px;
+        width: 45px;
+        cursor: pointer;
+    }
+
+    #About-Me{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .about-img{
+        display: grid;
+        padding-top: 0;
+    }
+
+    #profile-img{
+        height: 280px;
+        width: 280px;
+    }
+
+    .intro-skills{
+        width:90%;
+        padding-left: 20px;
+    }
+
+    .intro-skills p{
+        font-size: 18px;
+    }
+
+    .highlight-name {
+        font-size: 1.25rem; 
+    }
+
+    .skills-detail {
+        grid-template-columns: 1fr; 
+    }
+
+    #tech-skills {
+        grid-column: span 1; 
+    }
+
+
+    .social-icon{
+        display: flex;
+    }
+
+    .usf-it, .kmc, .aramark {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .logo-text{
+        gap: 3rem;
+    }
+
 
     .project-detail{
         grid-template-columns: 1fr;
@@ -1091,15 +1180,16 @@ textarea{
     }
 
     .robot{
-        width:85%;
+        width:90%;
         margin: 0 auto;
     }
 
-
-    #tech-skills{
-        width:85%;
-        margin: 0 auto;
+    #my-projects{
+        margin-top: 1rem;
     }
 
+    #contact-me{
+        margin-top: 1rem;
+    }
 
 }
