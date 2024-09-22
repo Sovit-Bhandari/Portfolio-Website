@@ -631,6 +631,10 @@
     font-size: 20px; 
 }
 
+.contact-p{
+    color: white;
+}
+
 .form{
     display: grid;
     gap: 2rem;
@@ -1070,6 +1074,10 @@ textarea{
         margin-top: 2rem;
     }
 
+    .contact-p{
+        color: white;
+    }
+
 
 
 
@@ -1190,6 +1198,10 @@ textarea{
 
     #contact-me{
         margin-top: 1rem;
+    }
+
+    .contact-p{
+        color: white;
     }
 
 }
